@@ -7,6 +7,7 @@ class CreateProjects < ActiveRecord::Migration[6.0]
       t.string :github_url
       t.integer :category_id
       t.integer :folder_id
+      t.datetime :published_at
 
       t.timestamps
     end

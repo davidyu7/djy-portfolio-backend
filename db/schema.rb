@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 2020_07_26_181345) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -32,8 +30,6 @@ ActiveRecord::Schema.define(version: 2020_07_26_181345) do
   create_table "folders", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "hotspots", force: :cascade do |t|
@@ -41,16 +37,12 @@ ActiveRecord::Schema.define(version: 2020_07_26_181345) do
     t.text "description"
     t.integer "xpos"
     t.integer "ypos"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "images", force: :cascade do |t|
     t.string "src_url"
     t.integer "project_id"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -60,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_07_26_181345) do
     t.string "github_url"
     t.integer "category_id"
     t.integer "folder_id"
+    t.datetime "published_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -67,14 +60,10 @@ ActiveRecord::Schema.define(version: 2020_07_26_181345) do
   create_table "pt_joins", force: :cascade do |t|
     t.integer "project_id"
     t.integer "tag_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tags", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

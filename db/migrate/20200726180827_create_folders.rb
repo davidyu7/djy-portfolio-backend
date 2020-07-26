@@ -3,8 +3,6 @@ class CreateFolders < ActiveRecord::Migration[6.0]
     create_table :folders do |t|
       t.string :name
       t.text :description
-
-      t.timestamps
     end
   end
 end

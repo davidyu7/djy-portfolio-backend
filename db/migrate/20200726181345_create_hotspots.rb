@@ -5,8 +5,6 @@ class CreateHotspots < ActiveRecord::Migration[6.0]
       t.text :description
       t.integer :xpos
       t.integer :ypos
-
-      t.timestamps
     end
   end
 end

@@ -7,6 +7,7 @@ class Category < ApplicationRecord
     end
 
     def projects_full
+        
     end
     
 end
