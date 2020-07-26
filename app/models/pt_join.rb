@@ -1,6 +1,6 @@
 class PtJoin < ApplicationRecord
 
-    belongs_to :projects
-    belongs_to :tags
+    belongs_to :project
+    belongs_to :tag
 
 end
