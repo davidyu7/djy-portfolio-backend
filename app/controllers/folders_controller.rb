@@ -1,8 +1,8 @@
 class FoldersController < ApplicationController
 
     def index
-        categories = Category.all
-        render json: categories
+        folders = Folder.all
+        render json: folders.to_json(methods: :project_previews)
     end
 
     def show

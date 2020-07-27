@@ -2,7 +2,7 @@ class TagsController < ApplicationController
 
     def index
         tags = Tag.all
-        render json: tags
+        render json: tags.to_json(methods: :project_previews)
     end
 
     def show
