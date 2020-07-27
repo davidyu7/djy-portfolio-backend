@@ -12,15 +12,29 @@ class Project < ApplicationRecord
         {
             title: self.title,
             #shortens description to 100 chars
-            description: self.description.truncate(100) + '...',
-            category: self.category,
-            folder: self.folder,
-            tags: self.tags
+            description: self.description.truncate(100),
+            thumbnail_url: self.thumbnail_url,
+            category: self.category_preview,
+            folder: self.folder_preview,
+            tags: self.tags_preview
         }
     end
 
-    def full
+    # extracts only name and id from category
+    def category_preview
+        { id: self.category.id, name: self.category.name }
+    end
 
+    # extracts only name and id from folder
+    def folder_preview
+        { id: self.folder.id, name: self.folder.name }
+    end
+
+    # extracts only name and id from each tag
+    def tags_preview
+        self.tags.map do |tag|
+            { id: tag.id, name: tag.name }
+        end
     end
     
 end

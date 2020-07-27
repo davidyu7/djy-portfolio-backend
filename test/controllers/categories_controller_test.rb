@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class FolderControllerTest < ActionDispatch::IntegrationTest
+class CategoriesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
