@@ -10,6 +10,7 @@ class Project < ApplicationRecord
     # determines which attributes to include in a preview of the project
     def preview
         {
+            id: self.id,
             title: self.title,
             #shortens description to 100 chars
             description: self.description.truncate(100),
