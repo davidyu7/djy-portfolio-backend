@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
 
     def index
         categories = Category.all
-        render json: categories.to_json(methods: :project_previews)
+        render json: categories.to_json
     end
 
     def show
